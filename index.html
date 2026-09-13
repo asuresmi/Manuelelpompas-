@@ -8,7 +8,7 @@
     <meta name="keywords" content="sweet bonanza, sweet bonanza oyna, sweet bonanza rtp, slot oyunu, sweet bonanza taktikleri">
     
     <style>
-        /* ===== GENEL AYARLAR ===== */
+        /* ===== GENEL ===== */
         * {
             margin: 0;
             padding: 0;
@@ -17,7 +17,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a0000 0%, #2b0000 50%, #1a0000 100%);
+            background: #000000;
             color: #ffffff;
             line-height: 1.7;
             overflow-x: hidden;
@@ -25,96 +25,75 @@
         
         /* ===== BAŞLIK ===== */
         header {
-            background: linear-gradient(135deg, #2b0000 0%, #4a0000 50%, #2b0000 100%);
+            background: #000000;
             padding: 80px 20px;
             text-align: center;
+            border-bottom: 2px solid #ff6600;
             position: relative;
-            overflow: hidden;
-            border-bottom: 3px solid #ff6600;
-        }
-        
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 102, 0, 0.15) 0%, transparent 70%);
-            animation: rotate 20s linear infinite;
-        }
-        
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
         }
         
         header h1 {
             font-size: 3rem;
-            color: #ff6600;
-            text-shadow: 0 0 20px rgba(255, 102, 0, 0.9), 0 0 40px rgba(255, 102, 0, 0.6);
+            font-weight: 900; /* Çok kalın */
+            color: #ffffff;
             margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-            animation: glow 2s ease-in-out infinite alternate;
+            letter-spacing: 1px;
+            text-shadow: 0 0 20px rgba(255, 102, 0, 0.8);
         }
         
-        @keyframes glow {
-            from { text-shadow: 0 0 20px rgba(255, 102, 0, 0.7); }
-            to { text-shadow: 0 0 40px rgba(255, 102, 0, 1), 0 0 60px rgba(255, 102, 0, 0.8); }
+        header h1 span {
+            color: #ff6600;
+            font-weight: 300; /* İnce */
         }
         
         header p {
-            font-size: 1.3rem;
-            color: #ffb347;
-            position: relative;
-            z-index: 1;
-            margin-bottom: 30px;
+            font-size: 1.2rem;
+            font-weight: 300; /* İnce */
+            color: #cccccc;
+            margin-bottom: 35px;
+            letter-spacing: 0.5px;
         }
         
-        /* ===== BUTONLAR (3 BOYUTLU) ===== */
-        .btn-sweet {
+        /* ===== BEYAZ BUTONLAR ===== */
+        .btn-white {
             display: inline-block;
-            background: linear-gradient(145deg, #ff8c00, #e67300);
-            color: #fff;
-            font-weight: bold;
-            font-size: 1.1rem;
-            padding: 18px 50px;
+            background: #ffffff;
+            color: #000000;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 16px 45px;
             border-radius: 50px;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 2px;
-            box-shadow: 0 8px #b35900, 0 0 30px rgba(255, 140, 0, 0.7);
-            transition: all 0.2s ease;
-            position: relative;
-            z-index: 1;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
         }
         
-        .btn-sweet:hover {
-            transform: translateY(4px);
-            box-shadow: 0 4px #b35900, 0 0 50px rgba(255, 140, 0, 1);
-        }
-        
-        .btn-sweet:active {
-            transform: translateY(8px);
-            box-shadow: 0 0 #b35900, 0 0 30px rgba(255, 140, 0, 1);
+        .btn-white:hover {
+            background: transparent;
+            color: #ffffff;
+            box-shadow: 0 0 45px rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
         }
         
         /* ===== BÖLÜMLER ===== */
         section {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
         
         section h2 {
             font-size: 2.2rem;
-            color: #ff6600;
+            font-weight: 800;
+            color: #ffffff;
             text-align: center;
-            margin-bottom: 40px;
-            text-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
+            margin-bottom: 45px;
+            letter-spacing: 1px;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
         }
         
         section h2::after {
@@ -123,26 +102,33 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
+            width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, transparent, #ff6600, transparent);
-            box-shadow: 0 0 15px #ff6600;
+            background: #ffffff;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
         }
         
         section h3 {
-            color: #ffb347;
-            font-size: 1.5rem;
-            margin: 30px 0 15px 0;
-            text-shadow: 0 0 10px rgba(255, 140, 0, 0.5);
+            color: #ffffff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 25px 0 15px 0;
         }
         
         section p {
-            font-size: 1.05rem;
-            color: #f0e0d0;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #cccccc;
             margin-bottom: 15px;
+            letter-spacing: 0.3px;
         }
         
-        /* ===== KARTLAR ===== */
+        section p strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+        
+        /* ===== SİYAH KARTLAR ===== */
         .card-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -151,26 +137,31 @@
         }
         
         .card {
-            background: linear-gradient(145deg, #3d0000, #2b0000);
-            border: 2px solid #ff6600;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 0 25px rgba(255, 102, 0, 0.4), inset 0 0 15px rgba(255, 102, 0, 0.1);
+            background: #000000;
+            border: 1px solid #333333;
+            border-radius: 15px;
+            padding: 35px 30px;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
             transition: all 0.3s ease;
         }
         
         .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 0 40px rgba(255, 102, 0, 0.8), inset 0 0 25px rgba(255, 102, 0, 0.2);
+            border-color: #ffffff;
+            box-shadow: 0 0 35px rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
         }
         
         .card h3 {
             margin-top: 0;
-            color: #ff6600;
+            color: #ffffff;
+            font-weight: 800;
+            font-size: 1.3rem;
         }
         
         .card p {
-            color: #ffd9b3;
+            color: #aaaaaa;
+            font-weight: 300;
+            font-size: 0.95rem;
         }
         
         /* ===== TABLO ===== */
@@ -179,26 +170,28 @@
             max-width: 700px;
             margin: 30px auto;
             border-collapse: collapse;
-            background: linear-gradient(145deg, #3d0000, #2b0000);
+            background: #000000;
+            border: 1px solid #333333;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(255, 102, 0, 0.5);
         }
         
         .rtp-table td {
-            padding: 18px 25px;
-            border-bottom: 1px solid rgba(255, 102, 0, 0.3);
-            font-size: 1.05rem;
+            padding: 20px 25px;
+            border-bottom: 1px solid #222222;
+            font-size: 1rem;
         }
         
         .rtp-table td:first-child {
-            color: #ffb347;
-            font-weight: bold;
+            color: #aaaaaa;
+            font-weight: 300;
         }
         
         .rtp-table td:last-child {
             color: #ffffff;
+            font-weight: 800;
             text-align: right;
+            letter-spacing: 0.5px;
         }
         
         .rtp-table tr:last-child td {
@@ -206,7 +199,7 @@
         }
         
         .rtp-table tr:hover {
-            background: rgba(255, 102, 0, 0.1);
+            background: rgba(255, 255, 255, 0.03);
         }
         
         /* ===== ADIM LİSTESİ ===== */
@@ -218,48 +211,59 @@
         
         .steps li {
             counter-increment: step-counter;
-            background: linear-gradient(145deg, #3d0000, #2b0000);
-            border-left: 4px solid #ff6600;
+            background: #000000;
+            border: 1px solid #333333;
+            border-left: 3px solid #ffffff;
             border-radius: 10px;
-            padding: 20px 25px 20px 80px;
-            margin-bottom: 20px;
+            padding: 25px 30px 25px 90px;
+            margin-bottom: 18px;
             position: relative;
-            box-shadow: 0 0 20px rgba(255, 102, 0, 0.3);
             transition: all 0.3s ease;
         }
         
         .steps li:hover {
-            transform: translateX(10px);
-            box-shadow: 0 0 30px rgba(255, 102, 0, 0.7);
+            border-color: #ffffff;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
         }
         
         .steps li::before {
             content: counter(step-counter);
             position: absolute;
-            left: 20px;
+            left: 25px;
             top: 50%;
             transform: translateY(-50%);
             width: 45px;
             height: 45px;
-            background: linear-gradient(145deg, #ff8c00, #e67300);
+            background: #ffffff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
-            font-size: 1.3rem;
-            color: #fff;
-            box-shadow: 0 0 20px rgba(255, 140, 0, 0.8);
+            font-weight: 900;
+            font-size: 1.2rem;
+            color: #000000;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+        
+        .steps li strong {
+            color: #ffffff;
+            font-weight: 800;
+        }
+        
+        .steps li {
+            color: #bbbbbb;
+            font-weight: 300;
         }
         
         /* ===== UYARI KUTUSU ===== */
         .warning-box {
-            background: linear-gradient(145deg, #4a0000, #2b0000);
-            border: 2px solid #ff6600;
-            border-radius: 15px;
-            padding: 30px;
+            background: #000000;
+            border: 1px solid #333333;
+            border-left: 3px solid #ffffff;
+            border-radius: 12px;
+            padding: 35px;
             margin-top: 30px;
-            box-shadow: 0 0 30px rgba(255, 102, 0, 0.5);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
         }
         
         .warning-box ul {
@@ -267,10 +271,16 @@
         }
         
         .warning-box li {
-            padding: 12px 0 12px 35px;
+            padding: 14px 0 14px 35px;
             position: relative;
-            color: #ffd9b3;
-            border-bottom: 1px solid rgba(255, 102, 0, 0.2);
+            color: #bbbbbb;
+            font-weight: 300;
+            border-bottom: 1px solid #1a1a1a;
+        }
+        
+        .warning-box li strong {
+            color: #ffffff;
+            font-weight: 800;
         }
         
         .warning-box li:last-child {
@@ -278,104 +288,120 @@
         }
         
         .warning-box li::before {
-            content: '⚠️';
+            content: '⚠';
             position: absolute;
             left: 0;
+            top: 14px;
             font-size: 1.2rem;
+            color: #ffffff;
         }
         
         /* ===== SSS ===== */
         .faq-item {
-            background: linear-gradient(145deg, #3d0000, #2b0000);
+            background: #000000;
+            border: 1px solid #333333;
+            border-left: 3px solid #ffffff;
             border-radius: 12px;
-            padding: 25px;
+            padding: 28px 30px;
             margin-bottom: 15px;
-            border-left: 4px solid #ff6600;
-            box-shadow: 0 0 20px rgba(255, 102, 0, 0.3);
             transition: all 0.3s ease;
         }
         
         .faq-item:hover {
-            box-shadow: 0 0 35px rgba(255, 102, 0, 0.7);
+            border-color: #ffffff;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
         }
         
         .faq-item h3 {
-            color: #ff6600;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
+            color: #ffffff;
+            font-weight: 800;
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+            letter-spacing: 0.3px;
         }
         
         .faq-item p {
-            color: #ffd9b3;
+            color: #aaaaaa;
+            font-weight: 300;
         }
         
         /* ===== FOOTER ===== */
         footer {
-            background: linear-gradient(135deg, #2b0000, #1a0000);
-            padding: 40px 20px;
+            background: #000000;
+            padding: 50px 20px;
             text-align: center;
-            border-top: 3px solid #ff6600;
-            box-shadow: 0 0 30px rgba(255, 102, 0, 0.5) inset;
+            border-top: 1px solid #333333;
         }
         
         footer p {
-            color: #ffb347;
+            color: #888888;
             margin-bottom: 10px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+        
+        footer p strong {
+            color: #ffffff;
+            font-weight: 700;
         }
         
         footer .legal {
-            color: #cc8866;
-            font-size: 0.85rem;
-            margin-top: 20px;
+            color: #666666;
+            font-size: 0.8rem;
+            margin-top: 25px;
             font-style: italic;
+            font-weight: 300;
         }
         
-        /* ===== MOBİL UYUMLULUK ===== */
+        /* ===== MOBİL ===== */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
             
             header p {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             section h2 {
-                font-size: 1.7rem;
+                font-size: 1.6rem;
             }
             
-            .btn-sweet {
-                padding: 15px 35px;
-                font-size: 1rem;
+            .btn-white {
+                padding: 14px 35px;
+                font-size: 0.9rem;
+            }
+            
+            .steps li {
+                padding: 20px 20px 20px 75px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== BAŞLIK BÖLÜMÜ ===== -->
+    <!-- ===== BAŞLIK ===== -->
     <header>
-        <h1>🍭 Sweet Bonanza'nın Tatlı Dünyasına Hoş Geldiniz 🍬</h1>
-        <p>Renkli şekerler ve büyük kazançlarla dolu bir slot deneyimi sizi bekliyor!</p>
-        <a href="#oyna" class="btn-sweet">Hemen Oyna</a>
+        <h1>Sweet Bonanza <span>Rehberi</span></h1>
+        <p>Tatlı kazançların dünyasına adım atın</p>
+        <a href="#oyna" class="btn-white">Hemen Oyna</a>
     </header>
 
     <!-- ===== OYUN HAKKINDA ===== -->
     <section id="oyun-hakkinda">
         <h2>Sweet Bonanza Nedir?</h2>
-        <p>Sweet Bonanza, Pragmatic Play tarafından geliştirilen popüler bir video slot oyunudur. 6x5 düzeninde oynanan oyun, "Pay-Anywhere" kazanç sistemi ile klasik slotlardan ayrılır. Kazançlar için sembollerin belirli bir hatta dizilmesi gerekmez; aynı sembollerin herhangi bir yerde 8 veya daha fazla kez görünmesi yeterlidir.</p>
+        <p><strong>Sweet Bonanza</strong>, Pragmatic Play tarafından geliştirilen popüler bir video slot oyunudur. <strong>6x5 düzeninde</strong> oynanan oyun, "Pay-Anywhere" kazanç sistemi ile klasik slotlardan ayrılır. Kazançlar için sembollerin belirli bir hatta dizilmesi gerekmez; aynı sembollerin herhangi bir yerde <strong>8 veya daha fazla</strong> kez görünmesi yeterlidir.</p>
     </section>
 
-    <!-- ===== RTP VE VOLATİLİTE ===== -->
+    <!-- ===== RTP ===== -->
     <section id="rtp">
         <h2>RTP ve Volatilite Oranları</h2>
         <table class="rtp-table">
-            <tr><td>Resmi RTP:</td><td>%96,51</td></tr>
-            <tr><td>Volatilite:</td><td>Yüksek</td></tr>
-            <tr><td>Maksimum Kazanç:</td><td>21.100x bahis</td></tr>
-            <tr><td>Kazanç Sistemi:</td><td>Pay-Anywhere</td></tr>
-            <tr><td>Izgara:</td><td>6x5</td></tr>
+            <tr><td>Resmi RTP</td><td>%96,51</td></tr>
+            <tr><td>Volatilite</td><td>Yüksek</td></tr>
+            <tr><td>Maksimum Kazanç</td><td>21.100x bahis</td></tr>
+            <tr><td>Kazanç Sistemi</td><td>Pay-Anywhere</td></tr>
+            <tr><td>Izgara</td><td>6x5</td></tr>
         </table>
         <p><strong>Önemli:</strong> Bu oran, oyunun uzun vadede oyuncuya geri döndürdüğü ortalama değerdir. Kısa vadede sonuçlar tamamen rastgelelik ve şans faktörüne bağlıdır.</p>
     </section>
@@ -397,21 +423,21 @@
         <h2>Bonus Özellikleri</h2>
         <div class="card-grid">
             <div class="card">
-                <h3>💣 Çarpan Bombaları</h3>
+                <h3>Çarpan Bombaları</h3>
                 <p>Sweet Bonanza'nın en dikkat çekici özelliği çarpan bombalarıdır. Bu bombalar 2x'ten 100x'e kadar çarpan değerleri taşır ve Tumble serisi sonunda toplanarak toplam kazancınıza uygulanır.</p>
             </div>
             <div class="card">
-                <h3>🎰 Bedava Döndürmeler</h3>
+                <h3>Bedava Döndürmeler</h3>
                 <p>4 veya daha fazla Scatter sembolü göründüğünde tetiklenir. 10 bedava döndürme kazanırsınız. Bu döndürmeler sırasında çarpan bombaları birikir ve bonus turu boyunca korunur.</p>
             </div>
             <div class="card">
-                <h3>🛒 Kaçak Satın Alma</h3>
+                <h3>Kaçak Satın Alma</h3>
                 <p>Bedava döndürmeleri beklemek istemeyenler için, bonus turunu doğrudan satın alma seçeneği de bulunur.</p>
             </div>
         </div>
     </section>
 
-    <!-- ===== DİKKAT EDİLMESİ GEREKENLER ===== -->
+    <!-- ===== DİKKAT ===== -->
     <section id="dikkat">
         <h2>Dikkat Edilmesi Gerekenler</h2>
         <div class="warning-box">
@@ -420,7 +446,7 @@
                 <li><strong>Deneme Modu:</strong> Gerçek parayla oynamadan önce demo modda mekaniğe alışın.</li>
                 <li><strong>Kendi Limitlerinizi Bilin:</strong> Ne kadar süre oynamak istediğinizi belirleyin ve bu süreyi aşmayın.</li>
                 <li><strong>Yasal Durum:</strong> Türkiye'de çevrimiçi kumar oynamak yasal olarak kısıtlanmıştır. Yalnızca lisanslı ve yasal platformları tercih edin.</li>
-                <li><strong>Yüksek Volatilite:</strong> Sweet Bonanza yüksek volatiliteye sahiptir. Uzun süre küçük veya sıfır kazanç dönemleri yaşanabilir; bu normaldir ve oyunun tasarımının bir parçasıdır.</li>
+                <li><strong>Yüksek Volatilite:</strong> Sweet Bonanza yüksek volatiliteye sahiptir. Uzun süre küçük veya sıfır kazanç dönemleri yaşanabilir; bu normaldir.</li>
             </ul>
         </div>
     </section>
@@ -435,17 +461,17 @@
         </div>
         
         <div class="faq-item">
-            <h3>Sweet Bonanza'da bedava dönüş nasıl kazanılır?</h3>
+            <h3>Bedava dönüş nasıl kazanılır?</h3>
             <p>4 veya daha fazla Scatter sembolü (lolipop) topladığınızda 10 bedava dönüş hakkı kazanırsınız.</p>
         </div>
         
         <div class="faq-item">
-            <h3>Sweet Bonanza'daki çarpanlar nasıl çalışır?</h3>
+            <h3>Çarpanlar nasıl çalışır?</h3>
             <p>Çarpan bombaları bedava dönüşler sırasında ekranda görünür ve değerleri bonus turu boyunca birikir.</p>
         </div>
         
         <div class="faq-item">
-            <h3>Sweet Bonanza'da maksimum kazanç ne kadar?</h3>
+            <h3>Maksimum kazanç ne kadar?</h3>
             <p>Oyunun maksimum kazancı 21.100x bahis tutarına kadar çıkabilir.</p>
         </div>
         
@@ -457,9 +483,9 @@
 
     <!-- ===== FOOTER ===== -->
     <footer>
-        <p>🍭 Sweet Bonanza Rehberi — Bilgilendirme Amaçlıdır 🍬</p>
-        <p>Bu site sadece eğlence ve bilgi amaçlıdır. Kumar bağımlılık yapabilir.</p>
-        <p class="legal">⚠️ 18 yaşından küçükler için uygun değildir. Sorumlu oyun oynayın. Türkiye'de çevrimiçi kumar yasal olarak kısıtlanmıştır.</p>
+        <p><strong>Sweet Bonanza Rehberi</strong> — Bilgilendirme Amaçlıdır</p>
+        <p>Bu site sadece eğlence ve bilgi amaçlıdır.</p>
+        <p class="legal">18 yaşından küçükler için uygun değildir. Kumar bağımlılık yapabilir. Sorumlu oyun oynayın. Türkiye'de çevrimiçi kumar yasal olarak kısıtlanmıştır.</p>
     </footer>
 
 </body>
